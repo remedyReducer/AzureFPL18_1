@@ -73,17 +73,20 @@ server.listen(process.env.port || process.env.PORT || 1337, function() {   //133
     appPassword: "qcfpmCID810$nkMMHY52#$_"
 }); */
 
-// By Siva
-//var connector = new builder.ChatConnector({
-//    appId: "cba3ada1-05d8-47d7-8722-d0dbe3b0fa6f", //mukesh app
-//    appPassword: "iyflSM44:|zgsQRDFC767|_"  //mukesh app
-//    //serviceUrl: 'https://smba.trafficmanager.net'
-//});
+// By Mukesh
+var connector = new builder.ChatConnector({
+    appId: "cba3ada1-05d8-47d7-8722-d0dbe3b0fa6f", //mukesh app
+    appPassword: "iyflSM44:|zgsQRDFC767|_"  //mukesh app
+    //serviceUrl: 'https://smba.trafficmanager.net'
+});
+
+/*
 var connector = new builder.ChatConnector({
     appId: "f79112cd-78f9-4e73-82fd-a67d021b8e3e",
     appPassword: "llhLBYJS603$)[darpNJ93-"
     //serviceUrl: 'https://smba.trafficmanager.net'
 });
+*/
 //Bot Endpoint
 var bot = new builder.UniversalBot(connector);
 server.post('/api/messages', connector.listen());
